@@ -1,0 +1,46 @@
+{
+    "settings": {
+        "number_of_shards": 3,
+        "refresh_interval": "60s",
+        "number_of_replicas": 0
+    },
+
+    "mappings": {
+         "session": {
+            "_source": { "enabled": true },
+            "properties": {
+                "date": {
+                    "type": "date",
+                    "format": "date_time_no_millis"
+                },
+                "src-version": { "type": "keyword" },
+                "srs-version": { "type": "keyword" },
+                "ctype": { "type": "keyword" },
+                "srs-type": { "type": "keyword" },
+                "src-product": { "type": "keyword" },
+                "src-platform": { "type": "keyword" },
+                "srs-platform": { "type": "keyword" },
+                "from": { "type": "keyword" },
+                "by": { "type": "keyword" },
+                "to": { "type": "keyword" },
+                "reason": { "type": "keyword" },
+                "oem-name": { "type": "keyword" },
+                "fps": { "type": "float" },
+                "bandwidth": { "type": "float" },
+                "duration": { "type": "float" },
+                "roundtrip": { "type": "float" },
+                "total": { "type": "long" },
+                "src-osver": { "type": "keyword" },
+                "srs-osver": { "type": "keyword" },
+                "src-uuid": { "type": "keyword" },
+                "srs-uuid": { "type": "keyword" },
+                "from-location": { "type": "geo_point"},
+                "by-location": { "type": "geo_point"},
+                "to-location": { "type": "geo_point"},
+				"from-ip": { "type": "ip"},
+                "by-ip": { "type": "ip"},
+                "to-ip": { "type": "ip"}
+            }
+        }
+    }
+}

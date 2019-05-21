@@ -1,0 +1,65 @@
+{
+    "settings": {
+        "number_of_shards": 3,
+        "refresh_interval": "60s",
+        "number_of_replicas": 0
+    },
+
+    "mappings": {
+        "data": {
+            "_source": { "enabled": true },
+            "properties": {
+                "date": {
+                    "type": "date",
+                    "format": "date_time_no_millis"
+                },
+                "v": { "type": "integer" },
+                "uuid": { "type": "keyword" },
+                "ts3": { "type": "long" },
+                "ts2": { "type": "long" },
+                "ts1": { "type": "long" },
+                "te3": { "type": "long" },
+                "te2": { "type": "long" },
+                "te1": { "type": "long" },
+                "t": { "type": "integer" },
+                "sv": { "type": "keyword" },
+                "st": { "type": "integer" },
+                "sp": { "type": "integer" },
+                "so": { "type": "keyword" },
+                "sip": { "type": "keyword" },
+                "sid": { "type": "keyword" },
+                "s": { "type": "integer" },
+                "rt": { "type": "integer" },
+                "rr": { "type": "keyword" },
+                "r": { "type": "keyword" },
+                "ping": { "type": "integer" },
+                "ov": { "type": "keyword" },
+                "os": { "type": "integer" },
+                "oem": { "type": "keyword" },
+                "id": { "type": "keyword" },
+                "fps": { "type": "keyword" },
+                "ev": { "type": "keyword" },
+                "et": { "type": "integer" },
+                "d3": { "type": "integer" },
+                "d2": { "type": "integer" },
+                "d1": { "type": "integer" },
+                "d": { "type": "integer" },
+                "ct": { "type": "integer" },
+                "bw": { "type": "float" },
+                "_ip": { "type": "keyword" },
+                "ec": {"type": "long"},
+                "ft": {"type": "long"},
+                "h": {"type": "long"},
+                "mm": {"type": "long"},
+                "sk": {"type": "long"},
+                "tf": {"type": "long"},
+                "tt": {"type": "long"},
+                "w": {"type": "long"},
+                "ol": {"type": "integer"},
+                "ui": {"type": "integer"},
+                "vq": {"type": "integer"},
+                "rc": {"type": "integer"}
+            }
+        }
+    }
+}

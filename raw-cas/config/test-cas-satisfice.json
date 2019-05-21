@@ -1,0 +1,31 @@
+{
+    "settings": {
+        "number_of_shards": 3,
+        "refresh_interval": "60s",
+        "number_of_replicas": 0
+    },
+
+    "mappings": {
+         "satisfice": {
+            "_source": { "enabled": true },
+            "properties": {
+                "date": {
+                    "type": "date"
+                },
+                "src-version": { "type": "keyword" },
+                "src-product": { "type": "keyword" },
+                "src-platform": { "type": "keyword" },
+                "from": { "type": "keyword" },
+                "oem-name": { "type": "keyword" },
+                "src-osver": { "type": "keyword" },
+                "src-uuid": { "type": "keyword" },
+                "from-location": { "type": "geo_point"},
+				"from-ip": { "type": "ip"},
+                "overall": { "type": "keyword" },
+                "ui": { "type": "keyword" },
+                "video-quality": { "type": "keyword" },
+                "remote-control": { "type": "keyword" }
+            }
+        }
+    }
+}
